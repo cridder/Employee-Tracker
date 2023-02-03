@@ -14,11 +14,11 @@ VALUES ("President", 321987, 1),
        ("Production Staff", 154321, 3);
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("Edward", "Kay", 1, NULL),
-       ("Ethan", "Hill", 2, 1),
-       ("Kanwara", "Ho", 3, NULL), 
-       ("May", "Ham", 4, 3),
-       ("Brandon", "Home",5, NULL),
-       ("Erika", "Tam", 6, 5),
-       ("Bambam", "Mo", 7, NULL),
-       ("Nan", "Nam",8, 7);
+VALUES ("Chris", "John", 1, NULL),
+       ("Brian", "Thomas", 2, 1),
+       ("Matt", "Vincet", 3, NULL), 
+       ("Marv", "John", 4, 3),
+       ("Evelyn", "Rose",5, NULL),
+       ("Ethan", "Smith", 6, 5),
+       ("Jessie", "Baker", 7, NULL),
+       ("Nan", "Ham",8, 7);
