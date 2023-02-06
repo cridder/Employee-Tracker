@@ -1,6 +1,17 @@
-# Employee-Tracker
-Build a command-line application from scratch to manage a company's employee database, using Node.js, Inquirer, and MySQL.
+# Employee Tracker
+repo - https://github.com/cridder/Employee-Tracker 
+video - 
 
+# Description
+A command line application that always you to build and manage an employee database using Node.js, Inquirer, and MySQL.  You can use this app to manage or look at an existing employee database. It has the capability to view employees, roles, and departments, and to add an employee, role, or department. You can also update the role of any employee or view employees by department.
+
+## Installation
+- Clone the repository
+- run npm install on the command line
+- run mysql -u root -p to open the mysql shell
+    - run source db/schema.sql and source db/seeds.sql to create and seed a database
+    - then type exit to leave the mysql shell
+- run npm start to start the command-line application
 
 ## User Story
 AS A business owner
@@ -26,3 +37,16 @@ GIVEN a command-line application that accepts user input
     - [X] THEN I am prompted to enter the employee’s first name, last name, role, and manager, and that employee is added to the database
 - [X] WHEN I choose to update an employee role
     - [X] THEN I am prompted to select an employee to update and their new role and this information is updated in the database
+
+## License
+GNU AGPLv3
+
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-lightgrey.svg)](https://www.gnu.org/licenses/agpl-3.0)
+
+## Contributing  
+[Fork and make a Pull Request](https://github.com/cridder/Note-Taker)
+
+## Questions
+[ASK](https://github.com/cridder)
+
+## END
