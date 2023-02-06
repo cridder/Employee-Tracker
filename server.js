@@ -23,7 +23,7 @@ const db = mysql.createConnection(
 	console.log(`Connected to the et_db database.`)
 );
 
-function selectQuestion() {
+function questionSelect() {
 	inquirer
 		.prompt([
 			{
@@ -54,9 +54,7 @@ function selectQuestion() {
 					viewEmployees();
 					break;
 
-				case "View All Departments":
-					manageEmployees();
-					break;
+
 				case "Add New Departments":
 					targetDepartment();
 					break;
@@ -83,7 +81,7 @@ function manageDepartment() {
 		}
 		console.log("\n");
 		console.table(result);
-		selectQuestion();
+		questionSelect();
 	});
 }
 
@@ -94,7 +92,7 @@ function manageRoles() {
 		}
 		console.log("\n");
 		console.table(result);
-		selectQuestion();
+		questionSelect();
 	});
 }
 
@@ -105,7 +103,7 @@ function manageEmployees() {
 		}
 		console.log("\n");
 		console.table(result);
-		selectQuestion();
+		questionSelect();
 	});
 }
 
@@ -116,7 +114,7 @@ function viewEmployees() {
 		}
 		console.log("\n");
 		console.table(result);
-		selectQuestion();
+		questionSelect();
 	});
 }
 
@@ -139,7 +137,7 @@ function targetDepartment() {
 					}
 					console.log(`\n`);
 					console.table(result);
-					selectQuestion();
+					questionSelect();
 				}
 			);
 		});
@@ -174,7 +172,7 @@ function newRole() {
 					}
 					console.log("\n");
 					console.table(result);
-					selectQuestion();
+					questionSelect();
 				}
 			);
 		});
@@ -220,7 +218,7 @@ function newEmployee() {
 					}
 					console.log("\n");
 					console.table(result);
-					selectQuestion();
+					questionSelect();
 				}
 			);
 		});
@@ -245,7 +243,7 @@ function updateExistingRole() {
 				"update employee set role_id = ? where id = ?",
 				[answer.role_id, answer.employee_id],
 				function (err, data) {
-					selectQuestion();
+					questionSelect();
 				}
 			);
 		});
@@ -255,7 +253,7 @@ function exit() {
 	return;
 }
 
-selectQuestion();
+questionSelect();
 
 // Default response for any other request (Not Found)
 app.use((req, res) => {
