@@ -45,27 +45,27 @@ function questionSelect() {
 		.then((answer) => {
 			switch (answer.queryOptions) {
 				case "View All Departments":
-					manageDepartment();
+					departmentManage();
 					break;
 				case "View All Roles":
-					manageRoles();
+					roleManage();
 					break;
 				case "View All Employees":
-					viewEmployees();
+					employeeView();
 					break;
 
 
 				case "Add New Departments":
-					targetDepartment();
+					departmentTarget();
 					break;
 				case "Add New Role":
-					newRole();
+					roleNew();
 					break;
 				case "Add New Employee":
-					newEmployee();
+					employeeNew();
 					break;
 				case "Update Employee Role":
-					updateExistingRole();
+					roleExistingUpdate();
 					break;
 				case "Exit":
 					exit();
@@ -74,7 +74,7 @@ function questionSelect() {
 		});
 }
 
-function manageDepartment() {
+function departmentManage() {
 	db.query("SELECT * FROM department order by id", (err, result) => {
 		if (err) {
 			console.log(err);
@@ -85,7 +85,7 @@ function manageDepartment() {
 	});
 }
 
-function manageRoles() {
+function roleManage() {
 	db.query("SELECT * FROM role", (err, result) => {
 		if (err) {
 			console.log(err);
@@ -96,7 +96,7 @@ function manageRoles() {
 	});
 }
 
-function manageEmployees() {
+function employeeManage() {
 	db.query("SELECT * FROM employee", (err, result) => {
 		if (err) {
 			console.log(err);
@@ -107,7 +107,7 @@ function manageEmployees() {
 	});
 }
 
-function viewEmployees() {
+function employeeView() {
 	db.query("SELECT * FROM employee", (err, result) => {
 		if (err) {
 			console.log(err);
@@ -118,7 +118,7 @@ function viewEmployees() {
 	});
 }
 
-function targetDepartment() {
+function departmentTarget() {
 	inquirer
 		.prompt([
 			{
@@ -143,7 +143,7 @@ function targetDepartment() {
 		});
 }
 
-function newRole() {
+function roleNew() {
 	inquirer
 		.prompt([
 			{
@@ -178,7 +178,7 @@ function newRole() {
 		});
 }
 
-function newEmployee() {
+function employeeNew() {
 	inquirer
 		.prompt([
 			{
@@ -224,7 +224,7 @@ function newEmployee() {
 		});
 }
 
-function updateExistingRole() {
+function roleExistingUpdate() {
 	inquirer
 		.prompt([
 			{
