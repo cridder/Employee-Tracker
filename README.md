@@ -1,6 +1,8 @@
 # Employee Tracker
 repo - https://github.com/cridder/Employee-Tracker 
-video - 
+
+video - https://drive.google.com/file/d/1Ns88T7cW-dWQDHXRAue_cL6QYn1exCRR/view?usp=sharing
+
 
 # Description
 A command line application that always you to build and manage an employee database using Node.js, Inquirer, and MySQL.  You can use this app to manage or look at an existing employee database. It has the capability to view employees, roles, and departments, and to add an employee, role, or department. You can also update the role of any employee or view employees by department.
